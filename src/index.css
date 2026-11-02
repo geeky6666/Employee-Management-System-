@@ -1,0 +1,47 @@
+/* Fonts are bundled inside the project (no internet needed to show them). */
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/jetbrains-mono";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #F3F5F9;
+  color: #111827;
+  font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Headings: tighter and bolder so they feel designed, not default */
+h1, h2, h3, h4 {
+  font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth scrolling for the navbar links */
+html { scroll-behavior: smooth; }
+
+/* Slim scrollbar for the Kanban columns */
+.column-scroll::-webkit-scrollbar { width: 6px; }
+.column-scroll::-webkit-scrollbar-thumb { background-color: #E1E6EE; border-radius: 50px; }
+.column-scroll::-webkit-scrollbar-track { background-color: transparent; }
+
+/* Gentle up-and-down bob for floating chips on the homepage */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* Respect people who turn animations off in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-float { animation: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Hide the scrollbar on horizontally-scrolling tab rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }

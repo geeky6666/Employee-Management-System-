@@ -1,5 +1,5 @@
-# Nexora — Company Website + Employee Management System
 
+<<<<<<< HEAD
 **Nexora** is a (fictional) web application studio. This project has two parts:
 a public company website, and **Nexora Workspace**, the employee management
 product behind the login.
@@ -198,3 +198,5 @@ src/
 #   E m p l o y e e - M a n a g e m e n t - S y s t e m -  
  #   E m p l o y e e - M a n a g e m e n t - S y s t e m -  
  
+=======
+>>>>>>> 188f4468a808f6b11acf529c34e6b87ff7d39f66
